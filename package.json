@@ -9,11 +9,22 @@
   "author": "Lets Go",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^8.1.0",
     "cypress": "^13.3.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "faker": "^6.6.6"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "commonPath": "cypress/integration/"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocakdans/cypressletsgo.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ocakdans/cypressletsgo/issues"
+  },
+  "homepage": "https://github.com/ocakdans/cypressletsgo#readme"
 }
