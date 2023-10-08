@@ -1,4 +1,5 @@
 import { Given, When, Then, DataTable } from  "cypress-cucumber-preprocessor/steps";
+
 const { faker } = require('@faker-js/faker');
 
 let response;
