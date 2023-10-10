@@ -1,5 +1,4 @@
 /// <reference types = "Cypress" />
-
 import { Given, When, Then, DataTable } from  "cypress-cucumber-preprocessor/steps";
 let response;
 
