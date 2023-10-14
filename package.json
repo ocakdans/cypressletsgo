@@ -16,5 +16,16 @@
     "nonGlobalStepDefinitions": true,
     "commonPath": "cypress/integration/"
   },
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocakdans/cypressletsgo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ocakdans/cypressletsgo/issues"
+  },
+  "homepage": "https://github.com/ocakdans/cypressletsgo#readme",
+  "dependencies": {
+    "faker": "^5.5.3"
+  }
 }

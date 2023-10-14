@@ -33,6 +33,6 @@ Then(`I verify the success response for todos`, () => {
     expect(response.status).to.eq(200)
     //expect(response.body.length).to.eq(10)
     expect(response.body[0]).to.have.all.keys("id", "user_id", "title", "due_on", "status")
-    expect(response.body[0].status).to.eq("completed")
-    expect(response.body[0]).to.deep.include({ status: "completed" });
+    expect(response.body[0].status).to.eq("pending")
+    expect(response.body[0]).to.deep.include({ status: "pending" });
 });

@@ -8,6 +8,7 @@ Given(`I send a request to user api`, () => {
         url: 'https://gorest.co.in/public/v2/users'
     }).then((res) =>{
         response = res
+        cy.log(JSON.stringify(response))
 
     })
 });
