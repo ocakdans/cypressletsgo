@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('getUserRequest', (url) => { 
+    cy.request({
+        method: 'GET',
+        url: 'https://gorest.co.in/public/v2/users'             
+    })
+})
+
+Cypress.Commands.add('getTodosRequest', (url) => { 
+    cy.request({
+        method: 'GET',
+        url: url             
+    })
+})

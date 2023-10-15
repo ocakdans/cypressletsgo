@@ -2,16 +2,13 @@
 import { Given, When, Then, DataTable } from  "cypress-cucumber-preprocessor/steps";
 let response;
 let firstID;
-
+let todosUrl = 'https://gorest.co.in/public/v2/todos'
 
 Given(`I send a request to todos api`, () => {
-    cy.request({
-        method: "GET",
-        url: "https://gorest.co.in/public/v2/todos"
-    }).then((res => {
-        firstID = res.body[0].id
+    cy.getTodosRequest(todosUrl)
+    .then((res) => {
         response = res
-    }))
+    })
 });
 
 
