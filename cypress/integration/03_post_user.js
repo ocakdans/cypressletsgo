@@ -24,7 +24,7 @@ Given(`I send a POST request to user api`, () => {
     })
 });
 Then(`I verify the POST response`, () => {
-    expect(response.status).to.eq(200)
+    expect(response.status).to.eq(201)
     expect(response.body.name).to.eq("Nai")
     expect(response.body.email).to.eq(randomEmail)
     expect(response.body.gender).to.eq("female")

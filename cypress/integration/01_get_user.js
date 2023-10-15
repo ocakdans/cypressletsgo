@@ -1,18 +1,33 @@
-/// <reference types = "Cypress" />
-import { Given, When, Then, DataTable } from  "cypress-cucumber-preprocessor/steps";
+// <reference types = "Cypress" />
+import { Given, When, Then, DataTable } from "cypress-cucumber-preprocessor/steps";
 let response;
-
+let userUrl = 'https://gorest.co.in/public/v2/users'
+// Given(`I send a request to user api`, () => {
+//     cy.request({
+//         method: 'GET',
+//         url: 'https://gorest.co.in/public/v2/users'
+//     }).then((res) => {
+//         response = res
+//     })
+// });
 Given(`I send a request to user api`, () => {
-    cy.request({
-        method: 'GET',
-        url: 'https://gorest.co.in/public/v2/users'
-    }).then((res) =>{
-        response = res
-        cy.log(JSON.stringify(response))
-
-    })
+    cy.getUserRequest(userUrl)
+        .then((res) => {
+            response = res
+        })
 });
-
+Given(`I send a request to user api by {string}`, (userid) => {
+    cy.getUserRequest(userUrl + "?id=" + userid)
+        .then((res) => {
+            response = res
+        })
+});
+Given(`I send a request to user api by {string} and {string}`, (userid, name) => {
+    cy.getUserRequest(userUrl + "?id=" + userid + "&name=" + name)
+        .then((res) => {
+            response = res
+        })
+});
 Then(`I verify the success response`, () => {
     expect(response.status).to.eq(200)
 });
