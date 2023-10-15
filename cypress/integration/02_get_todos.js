@@ -1,33 +1,23 @@
 /// <reference types = "Cypress" />
-import { Given, When, Then, DataTable } from  "cypress-cucumber-preprocessor/steps";
+import { Given, When, Then, DataTable } from "cypress-cucumber-preprocessor/steps";
 let response;
 let firstID;
+let todosUrl = 'https://gorest.co.in/public/v2/todos'
 
 
 Given(`I send a request to todos api`, () => {
-    cy.request({
-        method: "GET",
-        url: "https://gorest.co.in/public/v2/todos"
-    }).then((res => {
+    cy.getRequest(todosUrl).then((res => {
         firstID = res.body[0].id
         response = res
     }))
 });
 
-
-
-
-
 Given(`I send a request to todos api with id`, () => {
-    cy.request({
-        method: "GET",
-        url: `https://gorest.co.in/public/v2/todos?id=${firstID}`
-    }).then((res => {
-        response = res
-    }))
+    cy.getRequest(todosUrl + "?id=${firstID}")
+        .then((res => {
+            response = res
+        }))
 });
-
-
 
 Then(`I verify the success response for todos`, () => {
     expect(response.status).to.eq(200)
