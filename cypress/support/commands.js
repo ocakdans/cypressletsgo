@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('getRequest', (url) => {
+    cy.request({
+        method: 'GET',
+        url: url
+    })
+})
