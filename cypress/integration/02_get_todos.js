@@ -13,7 +13,7 @@ Given(`I send a request to todos api`, () => {
 });
 
 Given(`I send a request to todos api with id`, () => {
-    cy.getRequest(todosUrl + "?id=${firstID}")
+    cy.getRequest(todosUrl + `?id=${firstID}`)
         .then((res => {
             response = res
         }))
@@ -21,6 +21,7 @@ Given(`I send a request to todos api with id`, () => {
 
 Then(`I verify the success response for todos`, () => {
     expect(response.status).to.eq(200)
+    cy.log(JSON.stringify(response))
     //expect(response.body.length).to.eq(10)
     expect(response.body[0]).to.have.all.keys("id", "user_id", "title", "due_on", "status")
     expect(response.body[0].status).to.eq("completed")
