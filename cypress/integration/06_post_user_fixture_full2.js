@@ -4,6 +4,7 @@ let response;
 const faker = require('faker');
 let randomEmail = faker.internet.email()
 const userPayload = require("../fixtures/user_payload.json")
+let createdUserId;
 
 
 Given(`I send a POST request to user api with fixture file as body2`, () => {
@@ -21,6 +22,8 @@ Given(`I send a POST request to user api with fixture file as body2`, () => {
 
     }).then((res) => {
         response = res
+        createdUserId = response.body.id
+        cy.log("createdUserId:", createdUserId)
     })
 });
 
@@ -32,3 +35,6 @@ Then(`I verify the POST response for fixture file as body2`, () => {
     expect(response.body.status).to.eq(userPayload.status)
 
 });
+
+export{createdUserId}
+export{randomEmail}
