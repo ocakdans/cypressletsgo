@@ -6,6 +6,6 @@ module.exports = defineConfig({
       const cucumber = require('cypress-cucumber-preprocessor').default
       on('file:preprocessor', cucumber())
     },
-    specPattern: 'cypress/e2e/features/*.feature'
+    specPattern: 'cypress/e2e/features/*/*.feature'
   },
 });
