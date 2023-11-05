@@ -2,7 +2,7 @@ pipeline{
     agent any
     parameters{
         string(name: 'SPEC', defaultValue: "cypress/e2e/features/**/*.feature", description: "enter the spec to execute")
-        choice(name: "BROWSER", choices:['chrome', 'firefox', 'edge']), description: "choice the browser to execute"
+        choice(name: "BROWSER", choices:['chrome', 'firefox', 'edge'], description: "choice the browser to execute")
     }
 
     stages{
