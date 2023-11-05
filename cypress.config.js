@@ -8,4 +8,12 @@ module.exports = defineConfig({
     },
     specPattern: 'cypress/e2e/features/*/*.feature'
   },
+  reporter: "mochawesome",
+  reporterOptions: {
+   reportDir: "cypress/reports",
+   reportFilename: "[status]_[datetime]-[name]-report",
+   overwrite: true,
+   saveJson: true,
+   timestamp: "longDate"
+  }
 });

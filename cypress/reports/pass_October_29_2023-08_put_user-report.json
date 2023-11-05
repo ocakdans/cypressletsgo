@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-29T18:12:33.160Z",
+    "end": "2023-10-29T18:12:33.977Z",
+    "duration": 817,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "05829563-0569-4ae3-a325-60ace16b8b22",
+      "title": "",
+      "fullFile": "cypress/e2e/features/put/08_put_user.feature",
+      "file": "cypress/e2e/features/put/08_put_user.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ae702338-2ac5-4010-8eb4-d9752ca21082",
+          "title": "Gorest User Put Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest User PUT Request",
+              "fullTitle": "Gorest User Put Requests Gorest User PUT Request",
+              "timedOut": null,
+              "duration": 768,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "970fa375-8cac-40c8-8dfb-338795cb09b6",
+              "parentUUID": "ae702338-2ac5-4010-8eb4-d9752ca21082",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "970fa375-8cac-40c8-8dfb-338795cb09b6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 768,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "overwrite": true,
+        "saveJson": true,
+        "saveHtml": true,
+        "timestamp": "longDate"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

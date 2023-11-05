@@ -1,0 +1,612 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 13,
+    "passes": 12,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 13,
+    "passPercent": 92.3076923076923,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-10-29T18:12:07.722Z",
+    "end": "2023-10-29T18:12:33.977Z",
+    "duration": 26255
+  },
+  "results": [
+    {
+      "uuid": "0a456782-2c5e-4398-a049-b62f33473ebb",
+      "title": "",
+      "fullFile": "cypress/e2e/features/post/05_post_user_fixture_full.feature",
+      "file": "cypress/e2e/features/post/05_post_user_fixture_full.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a5c1c393-15dd-40ab-accb-06a912e9d0a8",
+          "title": "Gorest User Post Requests5",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest User POST Request",
+              "fullTitle": "Gorest User Post Requests5 Gorest User POST Request",
+              "timedOut": null,
+              "duration": 561,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://gorest.co.in/public/v2/users\n\nThe response we received from your web server was:\n\n  > 422: Unprocessable Entity\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://gorest.co.in/public/v2/users\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Bearer 1bcea0c3261ff52c5709814a543cd436c8b7136cd8f6c40dc77c7e74fd860137\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.3.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 111\n}\nBody: {\"email\":\"draupadi_somayaji196@cormier.example\",\"name\":\"Draupadi Somayaji\",\"gender\":\"male\",\"status\":\"inactive\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 422 - Unprocessable Entity\nHeaders: {\n  \"date\": \"Sun, 29 Oct 2023 18:12:23 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"cache-control\": \"no-cache\",\n  \"referrer-policy\": \"strict-origin-when-cross-origin\",\n  \"vary\": \"Origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-download-options\": \"noopen\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"x-permitted-cross-domain-policies\": \"none\",\n  \"x-ratelimit-limit\": \"90\",\n  \"x-ratelimit-remaining\": \"89\",\n  \"x-ratelimit-reset\": \"1\",\n  \"x-request-id\": \"35c6ee31-461c-4273-b3d8-736c94e8d8f6\",\n  \"x-runtime\": \"0.075841\",\n  \"x-xss-protection\": \"0\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=2WsucYMr3ynmjGS8fiv8Qfd2CzXHroRSzuckKqDyZWngKlaKsdmDjedWIS6ffyqtY9cZWrxefw3xOnRn2JKiIyAdHCmwCoqqaHxaBKQhqz%2BIsRQYDt5RwrF%2FynlDSLI%3D\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"81dd62eb3c145adc-VIE\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: [\n  {\n    \"field\": \"email\",\n    \"message\": \"has already been taken\"\n  }\n]\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://gorest.co.in/public/v2/users\n\nThe response we received from your web server was:\n\n  > 422: Unprocessable Entity\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://gorest.co.in/public/v2/users\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Bearer 1bcea0c3261ff52c5709814a543cd436c8b7136cd8f6c40dc77c7e74fd860137\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.3.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 111\n}\nBody: {\"email\":\"draupadi_somayaji196@cormier.example\",\"name\":\"Draupadi Somayaji\",\"gender\":\"male\",\"status\":\"inactive\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 422 - Unprocessable Entity\nHeaders: {\n  \"date\": \"Sun, 29 Oct 2023 18:12:23 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"cache-control\": \"no-cache\",\n  \"referrer-policy\": \"strict-origin-when-cross-origin\",\n  \"vary\": \"Origin\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-download-options\": \"noopen\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"x-permitted-cross-domain-policies\": \"none\",\n  \"x-ratelimit-limit\": \"90\",\n  \"x-ratelimit-remaining\": \"89\",\n  \"x-ratelimit-reset\": \"1\",\n  \"x-request-id\": \"35c6ee31-461c-4273-b3d8-736c94e8d8f6\",\n  \"x-runtime\": \"0.075841\",\n  \"x-xss-protection\": \"0\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=2WsucYMr3ynmjGS8fiv8Qfd2CzXHroRSzuckKqDyZWngKlaKsdmDjedWIS6ffyqtY9cZWrxefw3xOnRn2JKiIyAdHCmwCoqqaHxaBKQhqz%2BIsRQYDt5RwrF%2FynlDSLI%3D\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"81dd62eb3c145adc-VIE\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: [\n  {\n    \"field\": \"email\",\n    \"message\": \"has already been taken\"\n  }\n]\n\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:59386/__cypress/runner/cypress_runner.js:133260:72)\n    at tryCatcher (http://localhost:59386/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:59386/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:59386/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:59386/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:59386/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (http://localhost:59386/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:59386/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:59386/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:59386/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (cypress/integration/05_post_user_fixture_full.js:10:7)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)",
+                "diff": null
+              },
+              "uuid": "61d85ceb-b677-4739-b179-0af92da031c4",
+              "parentUUID": "a5c1c393-15dd-40ab-accb-06a912e9d0a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "61d85ceb-b677-4739-b179-0af92da031c4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 561,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f4f0b639-8618-4398-8bf2-086776df08f3",
+      "title": "",
+      "fullFile": "cypress/e2e/features/get/01_get_user.feature",
+      "file": "cypress/e2e/features/get/01_get_user.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f9467236-7dfa-4f78-a15e-4856eca4cfae",
+          "title": "Gorest User Get Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest User GET Request without filtering",
+              "fullTitle": "Gorest User Get Requests Gorest User GET Request without filtering",
+              "timedOut": null,
+              "duration": 790,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "da36571f-726c-4c58-8e90-3acea247cca7",
+              "parentUUID": "f9467236-7dfa-4f78-a15e-4856eca4cfae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gorest User GET Request by ID (example #1)",
+              "fullTitle": "Gorest User Get Requests Gorest User GET Request by ID (example #1)",
+              "timedOut": null,
+              "duration": 254,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "fe86e7e7-73bc-4d78-aba0-caaa5be5e369",
+              "parentUUID": "f9467236-7dfa-4f78-a15e-4856eca4cfae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gorest User GET Request by ID (example #2)",
+              "fullTitle": "Gorest User Get Requests Gorest User GET Request by ID (example #2)",
+              "timedOut": null,
+              "duration": 253,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "449c489e-b9b2-4bd4-8db7-ba00d210c261",
+              "parentUUID": "f9467236-7dfa-4f78-a15e-4856eca4cfae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gorest User GET Request by ID (example #3)",
+              "fullTitle": "Gorest User Get Requests Gorest User GET Request by ID (example #3)",
+              "timedOut": null,
+              "duration": 252,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "6d7cf3eb-ee9a-4d83-8a3f-6d033a7bcb3c",
+              "parentUUID": "f9467236-7dfa-4f78-a15e-4856eca4cfae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gorest User GET Request by ID and name (example #1)",
+              "fullTitle": "Gorest User Get Requests Gorest User GET Request by ID and name (example #1)",
+              "timedOut": null,
+              "duration": 271,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "d845056d-3e99-4049-948f-931ce3ed8202",
+              "parentUUID": "f9467236-7dfa-4f78-a15e-4856eca4cfae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "da36571f-726c-4c58-8e90-3acea247cca7",
+            "fe86e7e7-73bc-4d78-aba0-caaa5be5e369",
+            "449c489e-b9b2-4bd4-8db7-ba00d210c261",
+            "6d7cf3eb-ee9a-4d83-8a3f-6d033a7bcb3c",
+            "d845056d-3e99-4049-948f-931ce3ed8202"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1820,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a4f26134-455a-4024-ac58-d7ff8d830fb4",
+      "title": "",
+      "fullFile": "cypress/e2e/features/get/02_get_todos.feature",
+      "file": "cypress/e2e/features/get/02_get_todos.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d873bbac-9de7-4dbc-9ec0-3eadcbedf422",
+          "title": "Gorest Todos Get Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest Todos GET Request without filtering",
+              "fullTitle": "Gorest Todos Get Requests Gorest Todos GET Request without filtering",
+              "timedOut": null,
+              "duration": 305,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "de89ad20-8a61-4fbe-ad8e-4894e73b7f04",
+              "parentUUID": "d873bbac-9de7-4dbc-9ec0-3eadcbedf422",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gorest Todos GET Request with ID",
+              "fullTitle": "Gorest Todos Get Requests Gorest Todos GET Request with ID",
+              "timedOut": null,
+              "duration": 292,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "17922005-b34c-4936-aa2c-098d5fabc631",
+              "parentUUID": "d873bbac-9de7-4dbc-9ec0-3eadcbedf422",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de89ad20-8a61-4fbe-ad8e-4894e73b7f04",
+            "17922005-b34c-4936-aa2c-098d5fabc631"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 597,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "1d89dfa7-790b-456b-aaa3-6e5cd563392f",
+      "title": "",
+      "fullFile": "cypress/e2e/features/post/03_post_user.feature",
+      "file": "cypress/e2e/features/post/03_post_user.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1871e1bc-7806-4307-a5a9-dd8bb409b1c3",
+          "title": "Gorest User Post Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest User POST Request",
+              "fullTitle": "Gorest User Post Requests Gorest User POST Request",
+              "timedOut": null,
+              "duration": 318,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "7577edac-abaa-442e-a729-bdc9d50485da",
+              "parentUUID": "1871e1bc-7806-4307-a5a9-dd8bb409b1c3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7577edac-abaa-442e-a729-bdc9d50485da"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 318,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "67711b49-a048-4dfe-82cb-51e63feb039c",
+      "title": "",
+      "fullFile": "cypress/e2e/features/post/04_post_user_fixture_const.feature",
+      "file": "cypress/e2e/features/post/04_post_user_fixture_const.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "364c02e4-e29d-47f1-ade2-40fa80c7ee0a",
+          "title": "Gorest User Post Requests4",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest User POST Request",
+              "fullTitle": "Gorest User Post Requests4 Gorest User POST Request",
+              "timedOut": null,
+              "duration": 357,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "867773b9-3137-4721-b750-a971f0849587",
+              "parentUUID": "364c02e4-e29d-47f1-ade2-40fa80c7ee0a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "867773b9-3137-4721-b750-a971f0849587"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 357,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ff6c35bf-a445-4922-902f-1fd790597818",
+      "title": "",
+      "fullFile": "cypress/e2e/features/post/06_post_user_fixture_full.feature",
+      "file": "cypress/e2e/features/post/06_post_user_fixture_full.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d92a7264-cc29-4c6a-873f-3a9336a174b5",
+          "title": "Gorest User Post Requests6",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest User POST Request",
+              "fullTitle": "Gorest User Post Requests6 Gorest User POST Request",
+              "timedOut": null,
+              "duration": 367,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "36413f2f-4f9c-4b74-9962-849adefea149",
+              "parentUUID": "d92a7264-cc29-4c6a-873f-3a9336a174b5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "36413f2f-4f9c-4b74-9962-849adefea149"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 367,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fddd4aa5-427a-42d7-a8f3-ce975ee43ca4",
+      "title": "",
+      "fullFile": "cypress/e2e/features/post/07_post_user_fixture_full.feature",
+      "file": "cypress/e2e/features/post/07_post_user_fixture_full.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2dc1e23b-c79b-466f-bc96-ded30c37450d",
+          "title": "Gorest User Post Requests7",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest User POST Request",
+              "fullTitle": "Gorest User Post Requests7 Gorest User POST Request",
+              "timedOut": null,
+              "duration": 392,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "3bcb6325-2698-47b6-92cf-8a6b3b14687d",
+              "parentUUID": "2dc1e23b-c79b-466f-bc96-ded30c37450d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3bcb6325-2698-47b6-92cf-8a6b3b14687d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 392,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "05829563-0569-4ae3-a325-60ace16b8b22",
+      "title": "",
+      "fullFile": "cypress/e2e/features/put/08_put_user.feature",
+      "file": "cypress/e2e/features/put/08_put_user.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ae702338-2ac5-4010-8eb4-d9752ca21082",
+          "title": "Gorest User Put Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gorest User PUT Request",
+              "fullTitle": "Gorest User Put Requests Gorest User PUT Request",
+              "timedOut": null,
+              "duration": 768,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "970fa375-8cac-40c8-8dfb-338795cb09b6",
+              "parentUUID": "ae702338-2ac5-4010-8eb4-d9752ca21082",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "970fa375-8cac-40c8-8dfb-338795cb09b6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 768,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "overwrite": true,
+        "saveJson": true,
+        "saveHtml": true,
+        "timestamp": "longDate"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
